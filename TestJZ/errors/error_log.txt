@@ -1,0 +1,104 @@
+root@bf3a3d1f9ca4:/workspaces/ukbb_cardiac# /usr/bin/python3 /workspaces/ukbb_cardiac/TestJZ/DemoTestV0.py
+2024-05-22 00:57:23.577988: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2024-05-22 00:57:23.581446: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3187200000 Hz
+2024-05-22 00:57:23.582130: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x49c3f70 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2024-05-22 00:57:23.582142: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2024-05-22 00:57:23.583094: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2024-05-22 00:57:23.637042: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2024-05-22 00:57:23.637145: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4a32cb0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-05-22 00:57:23.637157: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): NVIDIA GeForce RTX 4090, Compute Capability 8.9
+2024-05-22 00:57:23.637257: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2024-05-22 00:57:23.637312: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: NVIDIA GeForce RTX 4090 major: 8 minor: 9 memoryClockRate(GHz): 2.61
+pciBusID: 0000:01:00.0
+2024-05-22 00:57:23.637425: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2024-05-22 00:57:23.638083: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2024-05-22 00:57:23.638696: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2024-05-22 00:57:23.638826: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2024-05-22 00:57:23.639575: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2024-05-22 00:57:23.640128: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2024-05-22 00:57:23.641951: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2024-05-22 00:57:23.641989: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2024-05-22 00:57:23.642050: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2024-05-22 00:57:23.642086: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2024-05-22 00:57:23.642101: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2024-05-22 00:57:23.642322: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2024-05-22 00:57:23.642325: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2024-05-22 00:57:23.642328: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2024-05-22 00:57:23.642359: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2024-05-22 00:57:23.642407: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2024-05-22 00:57:23.642456: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/device:GPU:0 with 22107 MB memory) -> physical GPU (device: 0, name: NVIDIA GeForce RTX 4090, pci bus id: 0000:01:00.0, compute capability: 8.9)
+GPUs available:
+  - GPU 0: /device:GPU:0
+Current working directory: /workspaces/ukbb_cardiac
+Found file at: /workspaces/ukbb_cardiac/TestJZ/trained_model/FCN_sa.meta
+First slice image saved to /workspaces/ukbb_cardiac/TestJZ/demo_image/1/sa_slice8_time6.png
+First slice image saved to /workspaces/ukbb_cardiac/TestJZ/demo_image/1/seg_sa_slice8_time6.png
+First slice image saved to /workspaces/ukbb_cardiac/TestJZ/demo_image/1/sa_ED_time8.png
+First slice image saved to /workspaces/ukbb_cardiac/TestJZ/demo_image/1/seg_sa_ED_time8.png
+******************************
+  Long-axis image analysis
+******************************
+Deploying the segmentation network ...
+WARNING:tensorflow:From common/deploy_network.py:54: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2024-05-22 00:57:25.288209: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2024-05-22 00:57:25.307223: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2024-05-22 00:57:25.307299: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: NVIDIA GeForce RTX 4090 major: 8 minor: 9 memoryClockRate(GHz): 2.61
+pciBusID: 0000:01:00.0
+2024-05-22 00:57:25.307379: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2024-05-22 00:57:25.307997: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2024-05-22 00:57:25.308633: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2024-05-22 00:57:25.308780: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2024-05-22 00:57:25.309578: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2024-05-22 00:57:25.310143: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2024-05-22 00:57:25.312059: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2024-05-22 00:57:25.312107: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2024-05-22 00:57:25.312173: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2024-05-22 00:57:25.312207: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2024-05-22 00:57:25.312376: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2024-05-22 00:57:25.315232: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3187200000 Hz
+2024-05-22 00:57:25.315817: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x596a050 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2024-05-22 00:57:25.315826: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2024-05-22 00:57:25.351959: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2024-05-22 00:57:25.352065: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4e57130 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-05-22 00:57:25.352077: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): NVIDIA GeForce RTX 4090, Compute Capability 8.9
+2024-05-22 00:57:25.352180: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2024-05-22 00:57:25.352231: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: NVIDIA GeForce RTX 4090 major: 8 minor: 9 memoryClockRate(GHz): 2.61
+pciBusID: 0000:01:00.0
+2024-05-22 00:57:25.352249: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2024-05-22 00:57:25.352254: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2024-05-22 00:57:25.352258: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2024-05-22 00:57:25.352262: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2024-05-22 00:57:25.352265: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2024-05-22 00:57:25.352269: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2024-05-22 00:57:25.352273: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2024-05-22 00:57:25.352289: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2024-05-22 00:57:25.352334: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2024-05-22 00:57:25.352367: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2024-05-22 00:57:25.352377: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2024-05-22 00:57:25.352584: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2024-05-22 00:57:25.352588: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2024-05-22 00:57:25.352590: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2024-05-22 00:57:25.352619: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2024-05-22 00:57:25.352668: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2024-05-22 00:57:25.352718: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 21726 MB memory) -> physical GPU (device: 0, name: NVIDIA GeForce RTX 4090, pci bus id: 0000:01:00.0, compute capability: 8.9)
+WARNING:tensorflow:From common/deploy_network.py:55: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+WARNING:tensorflow:From common/deploy_network.py:58: The name tf.train.import_meta_graph is deprecated. Please use tf.compat.v1.train.import_meta_graph instead.
+
+2024-05-22 00:57:25.621418: W tensorflow/core/graph/graph_constructor.cc:1491] Importing a graph with a lower producer version 24 into an existing graph with producer version 134. Shape inference will have run different parts of the graph with different producer versions.
+Start deployment on the data set ...
+1
+2
+/usr/local/lib/python3.6/dist-packages/numpy/core/fromnumeric.py:3257: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/usr/local/lib/python3.6/dist-packages/numpy/core/_methods.py:161: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+Average segmentation time = nans per sequence
+Traceback (most recent call last):
+  File "common/deploy_network.py", line 235, in <module>
+    process_time, len(processed_list), process_time / len(processed_list)))
+ZeroDivisionError: float division by zero
