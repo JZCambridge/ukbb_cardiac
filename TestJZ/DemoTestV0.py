@@ -5,6 +5,7 @@ import sys
 import argparse
 import nibabel as nib
 import numpy as np
+import matplotlib.pyplot as plt
 
 # appending path for ukbb_cardiac
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -34,6 +35,25 @@ def remove_slices_time (image_path, output_path, step=4):
     print(f"Modified shape: {modified_data.shape}")
     print(f"Modified image saved to {output_path}")
 
+def view_slice(nifti_file_path, slice=1, time=2, d3=False, output_image_path='first_slice.png'):
+    # Load the NIfTI file
+    nifti_img = nib.load(nifti_file_path)
+    
+    # Get the image data as a NumPy array
+    nifti_data = nifti_img.get_fdata()
+    
+    # Extract the first slice (assuming the slices are in the third dimension)
+    if not d3: first_slice = nifti_data[:, :, slice, time]
+    else: first_slice = nifti_data[:, :, slice]
+    
+    # Plot the first slice
+    plt.imshow(first_slice, cmap='gray')
+    plt.title('First Slice of NIfTI Image')
+    plt.axis('off')  # Hide axis labels
+    
+    # Save the plot to a file
+    plt.savefig(output_image_path)
+    print(f"First slice image saved to {output_image_path}")
 
 # # tensor 2.x
 # def list_available_gpus():
@@ -125,6 +145,26 @@ if __name__ == '__main__':
     # input_image_path = '/workspaces/ukbb_cardiac/TestJZ/demo_image/1/sa_ori.nii.gz'
     # output_image_path = '/workspaces/ukbb_cardiac/TestJZ/demo_image/1/sa.nii.gz'
     # remove_slices_time(input_image_path, output_image_path, step=2)
+    
+    # check results
+    nifti_file_path = '/workspaces/ukbb_cardiac/TestJZ/demo_image/1/sa.nii.gz'
+    out_path = '/workspaces/ukbb_cardiac/TestJZ/demo_image/1/sa_slice8_time6.png'
+    view_slice(nifti_file_path, slice=8, time=6, output_image_path=out_path)
+    
+    nifti_file_path = '/workspaces/ukbb_cardiac/TestJZ/demo_image/1/seg_sa.nii.gz'
+    out_path = '/workspaces/ukbb_cardiac/TestJZ/demo_image/1/seg_sa_slice8_time6.png'
+    view_slice(nifti_file_path, slice=8, time=6, output_image_path=out_path)
+    
+    # check results
+    nifti_file_path = '/workspaces/ukbb_cardiac/TestJZ/demo_image/1/sa_ED.nii.gz'
+    out_path = '/workspaces/ukbb_cardiac/TestJZ/demo_image/1/sa_ED_time8.png'
+    view_slice(nifti_file_path, slice=8, d3=True, output_image_path=out_path)
+    
+    nifti_file_path = '/workspaces/ukbb_cardiac/TestJZ/demo_image/1/seg_sa_ED.nii.gz'
+    out_path = '/workspaces/ukbb_cardiac/TestJZ/demo_image/1/seg_sa_ED_time8.png'
+    view_slice(nifti_file_path, slice=8, d3=True, output_image_path=out_path)
+    
+    # sys.exit()
     
     # # Analyse show-axis images
     # print('******************************')
